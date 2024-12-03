@@ -1,0 +1,117 @@
+---
+title: "BlurbDelver Documentation"
+author: "Jesse Brown"
+date: "2024-11-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(repos = c(CRAN = "https://cloud.r-project.org/"))
+```
+
+### Explanation of Layout:
+1. **Title & Metadata**: At the top of the document, we have the title, author, date, and output format.
+2. **Setup Chunk**: The `setup` chunk hides any initial setup code (like loading libraries or setting options) for cleaner output.
+3. **Overview**: A brief description of what the package does and what features it will have.
+4. **Function Placeholders**: Each planned function has a description, skeleton code, and an example. These sections serve as placeholders for the full implementation that will be added later.
+5. **Future Development**: Outlines future features and improvements.
+6. **Key Points & Final Thoughts**: Summarizes the structure of the documentation and reflects on how it serves as both a guide and a blueprint for future development.
+
+## Overview
+
+**BlurbDelver** is an R package designed to help user wrangle and analyze text data like tweets, posts, or comments in a simple and easy manor. Its primary features include:
+1. **Tokenization**: Breaking down text into individual words.
+2. **Sentiment Analysis**: Determining the tone of the text (positive, negative, neutral).
+3. **Word Clouds**: Visualizing word frequencies or sentiment distributions.
+
+---
+
+
+## Example Functions
+These are gutted example of the functions to come:
+
+### **1. TokenizeText**
+This function splits a block of text into individual tokens (words)
+```{r, echo=FALSE}
+TokenizeText <- function(text) {
+  unlist(strsplit(text, "\\s+"))
+}
+# Example
+TokenizeText("This is an example tweet!")
+# Expected Output: c("This", "is", "an", "example", "tweet!")
+```
+
+### **2. SentimentAnalysis**
+This code creates a sentiment analysis on the inputted text.
+
+```{r, echo=FALSE}
+SentimentAnalysis <- function(text) {
+  # Actual implementation to follow
+  list(positive = 5, negative = 2, neutral = 3)
+}
+# Example
+SentimentAnalysis("This is a fantastic day, but it could be better.")
+# Expected Output: 
+#$positive
+#[1] 5
+#
+#$negative
+#[1] 2
+#
+#$neutral
+#[1] 3
+
+```
+
+### **3. CreateWordCloud**
+This function will create a word cloud out of the given text input.
+
+```{r, echo=FALSE}
+CreateWordCloud <- function(text) {
+  # Actual implementation to follow
+  cat("Word cloud coming soon..")
+}
+# Example
+CreateWordCloud("This is an example tweet!")
+# Expected Output is a generated wordcloud plot using all the words given, and showing a bigger word for the ones that are more commonly used. 
+```
+
+### **4. SentimentTokenized**
+This function is passed a tokenized text object (from the TokenizeText function) and creates a sentiment analysis from that
+
+```{r, echo=FALSE}
+SentimentTokenized <- function(tokenized){
+  #1. get sentiment lexicon
+  #2. perform analysis on presented tokens
+  #3. return results
+}
+
+tokens <- TokenizeText(text)
+SentimentTokenized(tokens)
+
+#Expected output is a sentiment analysis on the given tokens object
+
+```
+
+### **5. CreateSentimentWordCloud**
+This function is to create a word cloud color coded based off of the results given to it by the results from either sentiment analysis function
+
+```{r, echo=FALSE}
+CreateSentimentWordCloud <- function(sentiment_data, tokens) {
+  #1. format sentiment data
+  #2. Set colors = sentiment_data
+  #3. Set freq to words from tokens
+  #4. create wordcloud with colors set to sentiment_data
+}
+
+CreateSentimentWordCloud(sentiment_data)
+
+#Expected output is a word cloud in only green or red, green for positive words, red for negative.
+```
+
+### Wrap-ups:
+
+- **Future Development**: We plan to add various capabilities such as stopword removal, sentiment visualization, and the ability to customize the wordcloud output
+
+- **Key Points & Final Thoughts**: This is still the early parts of the designing of the package. So far, only the bare-bone outline of the package has been created, with more coming soon. Next up in development is the filling out of the incorporated functions, as well as the addition of future developments planned. 

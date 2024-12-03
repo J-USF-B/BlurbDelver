@@ -1,0 +1,18 @@
+Package: BlurbDelver
+Type: Package
+Title: A toolkit that allows you to easily data wrangle any tweet, post, or comment
+Version: 0.1.0
+Authors@R: 
+    person("Jesse", "Brown", , "brown827@usf.edu", role = c("aut", "cre"))
+Description: A collection of functions used to analyse an inserted text, receive a tokenization of it, a sentiment analysis, and create wordclouds based upon the frequency or even the positive or negative tone of the word.
+Depends: R (>= 3.5.0)
+Imports:
+    dplyr,
+    tidytext,
+    wordcloud2
+License: CC0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+LazyData: true
+URL: https://github.com/J-USF-B/BlurbDelver
